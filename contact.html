@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Get in Touch with Petopia</title>
+    <meta name="description" content="Have questions about Petopia? Contact us through our contact form or reach out via email. We'd love to hear from you and help with your pet-related needs!">
+    <meta name="keywords" content="contact Petopia, customer support, pet questions, feedback, help">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <span class="brand-icon">🐾</span>
+                    <span class="brand-text">Petopia</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="name-generator.html" class="nav-link">Name Generator</a></li>
+                <li><a href="quiz.html" class="nav-link">Pet Quiz</a></li>
+                <li><a href="virtual-pet.html" class="nav-link">Virtual Pet</a></li>
+                <li><a href="mbti.html" class="nav-link">Pet MBTI</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>💌 Contact Us</h1>
+            <p>We'd love to hear from you! Whether you have questions, suggestions, or just want to share your pet stories, don't hesitate to reach out to our friendly team.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">📝 Send Us a Message</h2>
+                            <p class="card-subtitle">Fill out the form below and we'll get back to you as soon as possible!</p>
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-input">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select id="subject" name="subject" class="form-select" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Question</option>
+                                    <option value="technical">Technical Issue</option>
+                                    <option value="feature">Feature Request</option>
+                                    <option value="feedback">Feedback & Suggestions</option>
+                                    <option value="business">Business Inquiry</option>
+                                    <option value="privacy">Privacy Concern</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="petType" class="form-label">Your Pet Type (Optional)</label>
+                                <select id="petType" name="petType" class="form-select">
+                                    <option value="">Select your pet type</option>
+                                    <option value="dog">Dog 🐕</option>
+                                    <option value="cat">Cat 🐱</option>
+                                    <option value="bird">Bird 🐦</option>
+                                    <option value="rabbit">Rabbit 🐰</option>
+                                    <option value="fish">Fish 🐠</option>
+                                    <option value="reptile">Reptile 🦎</option>
+                                    <option value="multiple">Multiple Pets</option>
+                                    <option value="none">No Pet Yet</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us how we can help you..." required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
+                                    <span class="checkbox-text">I'd like to receive updates about new features and pet care tips</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" class="form-checkbox" required>
+                                    <span class="checkbox-text">I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms of Use</a> *</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">🌟 Other Ways to Reach Us</h2>
+                        </div>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>Email Us</h3>
+                                    <p>For general inquiries and support</p>
+                                    <a href="mailto:hello@petopia.icu" class="contact-link">hello@petopia.icu</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>Privacy & Legal</h3>
+                                    <p>For privacy and legal matters</p>
+                                    <a href="mailto:legal@petopia.icu" class="contact-link">legal@petopia.icu</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>Business Partnerships</h3>
+                                    <p>For collaboration and partnerships</p>
+                                    <a href="mailto:partnerships@petopia.icu" class="contact-link">partnerships@petopia.icu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Section -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">❓ Frequently Asked Questions</h3>
+                        </div>
+                        
+                        <div class="faq-section">
+                            <div class="faq-item">
+                                <h4>How accurate are the pet personality tests?</h4>
+                                <p>Our MBTI and personality tests are based on established animal behavior research and are designed for entertainment and educational purposes. While they provide insights into your pet's traits, they should complement, not replace, your personal observations and professional veterinary advice.</p>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <h4>Is Petopia free to use?</h4>
+                                <p>Yes! All our pet tools including the name generator, quiz, virtual pet game, and MBTI test are completely free to use. We support the website through tasteful advertising to keep it free for pet lovers everywhere.</p>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <h4>Do you store my pet's information?</h4>
+                                <p>We store your preferences and results locally in your browser for a better experience. This information stays on your device and isn't sent to our servers unless you contact us directly. Check our <a href="privacy.html">Privacy Policy</a> for full details.</p>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <h4>Can I suggest new features or pet names?</h4>
+                                <p>Absolutely! We love hearing from our community. Use the contact form above with "Feature Request" as the subject, or email us your suggestions. We're always looking to improve and add new features based on user feedback.</p>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <h4>Is this website suitable for children?</h4>
+                                <p>Petopia is designed to be family-friendly and suitable for pet lovers of all ages. However, we recommend parental supervision for children under 13, and we do not knowingly collect personal information from children under 13.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-icon">🐾</span>
+                        <span class="brand-text">Petopia</span>
+                    </div>
+                    <p>Your ultimate pet companion website for naming, caring, and understanding your beloved pets.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="name-generator.html">Name Generator</a></li>
+                        <li><a href="quiz.html">Pet Quiz</a></li>
+                        <li><a href="virtual-pet.html">Virtual Pet</a></li>
+                        <li><a href="mbti.html">Pet MBTI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Petopia. All rights reserved. Made with ❤️ for pet lovers everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitButton = contactForm.querySelector('.btn-submit');
+                const originalContent = submitButton.innerHTML;
+                
+                // Show loading state
+                submitButton.innerHTML = '<span class="loading"></span> Sending...';
+                submitButton.disabled = true;
+                
+                // Get form data
+                const formData = new FormData(contactForm);
+                const formObject = Object.fromEntries(formData);
+                
+                // Simulate form submission (in a real application, this would send to a server)
+                setTimeout(() => {
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Reset button
+                    submitButton.innerHTML = originalContent;
+                    submitButton.disabled = false;
+                    
+                    // Show success message
+                    PetopiaUtils.showAlert('Thank you for your message! We\'ll get back to you soon. 🐾', 'success');
+                    
+                    // In a real application, you would send the form data to your server here
+                    console.log('Contact form submission:', formObject);
+                    
+                }, 2000);
+            });
+        });
+    </script>
+    
+    <style>
+        /* Contact page specific styles */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-form-section,
+        .contact-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+        
+        .form-checkbox {
+            margin-top: 0.25rem;
+        }
+        
+        .checkbox-text {
+            color: var(--gray-dark);
+            font-size: 0.9rem;
+        }
+        
+        .checkbox-text a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .checkbox-text a:hover {
+            text-decoration: underline;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--gray-light);
+            border-radius: var(--border-radius);
+        }
+        
+        .method-icon {
+            background: var(--primary-color);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .method-details h3 {
+            color: var(--gray-dark);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+        
+        .method-details p {
+            color: var(--gray-medium);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .contact-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-link:hover {
+            text-decoration: underline;
+            color: var(--secondary-color);
+        }
+        
+        .faq-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .faq-item {
+            background: var(--gray-light);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .faq-item h4 {
+            color: var(--gray-dark);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .faq-item p {
+            color: var(--gray-medium);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .faq-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .faq-item a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Legal content styles for privacy and terms pages */
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .last-updated {
+            background: var(--gray-light);
+            padding: 0.75rem 1rem;
+            border-radius: var(--border-radius);
+            color: var(--gray-medium);
+            font-weight: 600;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .legal-text {
+            padding: 2rem;
+            line-height: 1.7;
+        }
+        
+        .legal-text h2 {
+            color: var(--gray-dark);
+            font-weight: 700;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .legal-text h2:first-child {
+            margin-top: 0;
+        }
+        
+        .legal-text h3 {
+            color: var(--gray-dark);
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .legal-text p {
+            color: var(--gray-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .legal-text ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        .legal-text li {
+            color: var(--gray-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .legal-text strong {
+            color: var(--gray-dark);
+            font-weight: 600;
+        }
+        
+        .legal-text a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .legal-text a:hover {
+            text-decoration: underline;
+        }
+        
+        .privacy-summary,
+        .terms-summary {
+            background: var(--gray-light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-top: 2rem;
+        }
+        
+        .privacy-summary h3,
+        .terms-summary h3 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .summary-item {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .summary-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .summary-item h4 {
+            color: var(--gray-dark);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .summary-item p {
+            color: var(--gray-medium);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .legal-text {
+                padding: 1rem;
+            }
+            
+            .legal-text ul {
+                padding-left: 1rem;
+            }
+            
+            .summary-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

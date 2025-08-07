@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Pet Game - Raise Your Digital Companion | Petopia</title>
+    <meta name="description" content="Adopt and care for your very own virtual pet! Feed, play, and watch your digital companion grow and thrive under your loving care in this interactive pet simulation.">
+    <meta name="keywords" content="virtual pet, digital pet, pet game, pet simulation, adopt pet, pet care game, interactive pet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <span class="brand-icon">🐾</span>
+                    <span class="brand-text">Petopia</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="name-generator.html" class="nav-link">Name Generator</a></li>
+                <li><a href="quiz.html" class="nav-link">Pet Quiz</a></li>
+                <li><a href="virtual-pet.html" class="nav-link active">Virtual Pet</a></li>
+                <li><a href="mbti.html" class="nav-link">Pet MBTI</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>🎮 Virtual Pet Game</h1>
+            <p>Adopt and care for your very own virtual companion! Feed, play, and nurture your digital pet as it grows and develops its unique personality.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <div class="pet-container">
+
+                <!-- Pet Selection Screen -->
+                <div id="petSelection" class="pet-selection">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">🏠 Adopt Your Virtual Pet</h2>
+                            <p class="card-subtitle">Choose your new digital companion and give them a loving home!</p>
+                        </div>
+                        
+                        <div class="pet-options">
+                            <div class="pet-option" data-pet="dog">
+                                <div class="pet-avatar">🐕</div>
+                                <h3>Virtual Dog</h3>
+                                <p>Loyal, playful, and energetic. Dogs love to play fetch and go for walks!</p>
+                                <div class="pet-traits">
+                                    <span class="trait">Playful</span>
+                                    <span class="trait">Loyal</span>
+                                    <span class="trait">Active</span>
+                                </div>
+                            </div>
+                            
+                            <div class="pet-option" data-pet="cat">
+                                <div class="pet-avatar">🐱</div>
+                                <h3>Virtual Cat</h3>
+                                <p>Independent, curious, and affectionate. Cats enjoy napping and exploring!</p>
+                                <div class="pet-traits">
+                                    <span class="trait">Independent</span>
+                                    <span class="trait">Curious</span>
+                                    <span class="trait">Calm</span>
+                                </div>
+                            </div>
+                            
+                            <div class="pet-option" data-pet="rabbit">
+                                <div class="pet-avatar">🐰</div>
+                                <h3>Virtual Rabbit</h3>
+                                <p>Gentle, social, and adorable. Rabbits love to hop around and eat fresh treats!</p>
+                                <div class="pet-traits">
+                                    <span class="trait">Gentle</span>
+                                    <span class="trait">Social</span>
+                                    <span class="trait">Cute</span>
+                                </div>
+                            </div>
+                            
+                            <div class="pet-option" data-pet="bird">
+                                <div class="pet-avatar">🐦</div>
+                                <h3>Virtual Bird</h3>
+                                <p>Intelligent, social, and musical. Birds love to sing and learn new tricks!</p>
+                                <div class="pet-traits">
+                                    <span class="trait">Smart</span>
+                                    <span class="trait">Musical</span>
+                                    <span class="trait">Social</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="nameInput" class="name-input" style="display: none;">
+                            <div class="form-group">
+                                <label for="petName" class="form-label">What would you like to name your pet?</label>
+                                <input type="text" id="petName" class="form-input" placeholder="Enter a cute name..." maxlength="20">
+                            </div>
+                            <button id="adoptPetBtn" class="btn btn-primary">
+                                <i class="fas fa-heart"></i> Adopt Pet
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pet Care Screen -->
+                <div id="petCare" class="pet-care" style="display: none;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 id="petNameTitle" class="card-title">Your Virtual Pet</h2>
+                            <p class="card-subtitle">Take good care of your digital companion!</p>
+                        </div>
+                        
+                        <div class="pet-display">
+                            <div id="petAvatar" class="pet-avatar">🐕</div>
+                            <div id="petMood" class="pet-mood">😊</div>
+                            <div id="petStatus" class="pet-status">Happy and healthy!</div>
+                            <div id="petAge" class="pet-age">Age: 0 days</div>
+                        </div>
+                        
+                        <div class="pet-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">
+                                    <i class="fas fa-drumstick-bite"></i> Hunger
+                                </div>
+                                <div class="stat-bar">
+                                    <div id="hungerFill" class="stat-fill hunger-fill"></div>
+                                </div>
+                                <span id="hungerValue" class="stat-value">100%</span>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-label">
+                                    <i class="fas fa-smile"></i> Happiness
+                                </div>
+                                <div class="stat-bar">
+                                    <div id="happinessFill" class="stat-fill happiness-fill"></div>
+                                </div>
+                                <span id="happinessValue" class="stat-value">100%</span>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-label">
+                                    <i class="fas fa-battery-full"></i> Energy
+                                </div>
+                                <div class="stat-bar">
+                                    <div id="energyFill" class="stat-fill energy-fill"></div>
+                                </div>
+                                <span id="energyValue" class="stat-value">100%</span>
+                            </div>
+                            
+                            <div class="stat-item">
+                                <div class="stat-label">
+                                    <i class="fas fa-heart"></i> Health
+                                </div>
+                                <div class="stat-bar">
+                                    <div id="healthFill" class="stat-fill health-fill"></div>
+                                </div>
+                                <span id="healthValue" class="stat-value">100%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pet-actions">
+                            <button id="feedBtn" class="action-btn feed-btn">
+                                <i class="fas fa-apple-alt"></i>
+                                <span>Feed</span>
+                            </button>
+                            
+                            <button id="playBtn" class="action-btn play-btn">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Play</span>
+                            </button>
+                            
+                            <button id="sleepBtn" class="action-btn sleep-btn">
+                                <i class="fas fa-bed"></i>
+                                <span>Sleep</span>
+                            </button>
+                            
+                            <button id="cleanBtn" class="action-btn clean-btn">
+                                <i class="fas fa-shower"></i>
+                                <span>Clean</span>
+                            </button>
+                            
+                            <button id="exerciseBtn" class="action-btn exercise-btn">
+                                <i class="fas fa-running"></i>
+                                <span>Exercise</span>
+                            </button>
+                            
+                            <button id="treatBtn" class="action-btn treat-btn">
+                                <i class="fas fa-cookie"></i>
+                                <span>Treat</span>
+                            </button>
+                        </div>
+                        
+                        <div class="pet-info">
+                            <div class="info-tabs">
+                                <button class="info-tab active" data-tab="stats">📊 Stats</button>
+                                <button class="info-tab" data-tab="achievements">🏆 Achievements</button>
+                                <button class="info-tab" data-tab="care">💡 Care Tips</button>
+                            </div>
+                            
+                            <div id="statsTab" class="tab-content">
+                                <div class="stats-grid">
+                                    <div class="stat-detail">
+                                        <h4>Level</h4>
+                                        <p id="petLevel">1</p>
+                                    </div>
+                                    <div class="stat-detail">
+                                        <h4>Experience</h4>
+                                        <p id="petExp">0 XP</p>
+                                    </div>
+                                    <div class="stat-detail">
+                                        <h4>Times Fed</h4>
+                                        <p id="timesFed">0</p>
+                                    </div>
+                                    <div class="stat-detail">
+                                        <h4>Times Played</h4>
+                                        <p id="timesPlayed">0</p>
+                                    </div>
+                                    <div class="stat-detail">
+                                        <h4>Mood</h4>
+                                        <p id="currentMood">Happy</p>
+                                    </div>
+                                    <div class="stat-detail">
+                                        <h4>Created</h4>
+                                        <p id="createdDate">Today</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="achievementsTab" class="tab-content" style="display: none;">
+                                <div id="achievementsList" class="achievements-list">
+                                    <p class="no-achievements">Complete care activities to earn achievements!</p>
+                                </div>
+                            </div>
+                            
+                            <div id="careTab" class="tab-content" style="display: none;">
+                                <div class="care-tips">
+                                    <div class="tip-item">
+                                        <h4>🍎 Regular Feeding</h4>
+                                        <p>Keep your pet well-fed to maintain their health and happiness. Different pets have different dietary needs!</p>
+                                    </div>
+                                    <div class="tip-item">
+                                        <h4>🎾 Daily Play</h4>
+                                        <p>Playing with your pet increases happiness and helps them learn new skills. Try different activities!</p>
+                                    </div>
+                                    <div class="tip-item">
+                                        <h4>😴 Adequate Rest</h4>
+                                        <p>Make sure your pet gets enough sleep to restore energy and maintain good health.</p>
+                                    </div>
+                                    <div class="tip-item">
+                                        <h4>🧼 Good Hygiene</h4>
+                                        <p>Regular cleaning keeps your pet healthy and happy. A clean pet is a happy pet!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="reset-section">
+                            <button id="resetPetBtn" class="btn btn-secondary btn-small">
+                                <i class="fas fa-redo"></i> Reset Pet
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Log -->
+                <div id="activityLog" class="activity-log" style="display: none;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">📝 Activity Log</h3>
+                            <button id="clearLogBtn" class="btn btn-secondary btn-small">Clear Log</button>
+                        </div>
+                        <div id="logContent" class="log-content">
+                            <p class="no-activities">No activities yet. Start taking care of your pet!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Instructions -->
+                <div class="instructions">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">🎮 How to Play</h3>
+                        </div>
+                        <div class="instructions-grid">
+                            <div class="instruction-item">
+                                <div class="instruction-icon">🍎</div>
+                                <h4>Feed Your Pet</h4>
+                                <p>Click the feed button to give your pet food. Regular feeding maintains health and prevents hunger.</p>
+                            </div>
+                            <div class="instruction-item">
+                                <div class="instruction-icon">🎾</div>
+                                <h4>Play & Exercise</h4>
+                                <p>Engage in play activities and exercise to keep your pet happy and healthy.</p>
+                            </div>
+                            <div class="instruction-item">
+                                <div class="instruction-icon">💤</div>
+                                <h4>Rest & Sleep</h4>
+                                <p>Help your pet rest when energy is low. Sleep restores energy and improves mood.</p>
+                            </div>
+                            <div class="instruction-item">
+                                <div class="instruction-icon">🧼</div>
+                                <h4>Keep Clean</h4>
+                                <p>Regular cleaning maintains hygiene and prevents illness. A clean pet is a happy pet!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-icon">🐾</span>
+                        <span class="brand-text">Petopia</span>
+                    </div>
+                    <p>Your ultimate pet companion website for naming, caring, and understanding your beloved pets.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="name-generator.html">Name Generator</a></li>
+                        <li><a href="quiz.html">Pet Quiz</a></li>
+                        <li><a href="virtual-pet.html">Virtual Pet</a></li>
+                        <li><a href="mbti.html">Pet MBTI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Petopia. All rights reserved. Made with ❤️ for pet lovers everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/virtual-pet.js"></script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet MBTI Test - Discover Your Pet's Personality Type | Petopia</title>
+    <meta name="description" content="Discover your pet's unique personality type with our comprehensive MBTI test! Get customized play and training recommendations based on your pet's characteristics.">
+    <meta name="keywords" content="pet personality, pet MBTI, pet psychology, pet behavior, pet training, pet personality test, animal behavior">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <span class="brand-icon">🐾</span>
+                    <span class="brand-text">Petopia</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="name-generator.html" class="nav-link">Name Generator</a></li>
+                <li><a href="quiz.html" class="nav-link">Pet Quiz</a></li>
+                <li><a href="virtual-pet.html" class="nav-link">Virtual Pet</a></li>
+                <li><a href="mbti.html" class="nav-link active">Pet MBTI</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>🧠 Pet MBTI Personality Test</h1>
+            <p>Discover your pet's unique personality type and get customized recommendations for play, training, and care based on their individual characteristics!</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <div class="mbti-container">
+
+                <!-- Test Introduction -->
+                <div id="testIntro" class="test-intro">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">🔍 Understanding Your Pet's Personality</h2>
+                            <p class="card-subtitle">Every pet is unique! This test helps identify your pet's personality traits and preferences.</p>
+                        </div>
+                        
+                        <div class="intro-content">
+                            <div class="personality-types">
+                                <h3>Pet Personality Dimensions</h3>
+                                <div class="dimensions-grid">
+                                    <div class="dimension">
+                                        <h4>Social vs. Independent</h4>
+                                        <p>Does your pet love being around others or prefer solo activities?</p>
+                                    </div>
+                                    <div class="dimension">
+                                        <h4>Active vs. Calm</h4>
+                                        <p>Is your pet energetic and playful or relaxed and peaceful?</p>
+                                    </div>
+                                    <div class="dimension">
+                                        <h4>Curious vs. Cautious</h4>
+                                        <p>Does your pet explore everything or prefer familiar environments?</p>
+                                    </div>
+                                    <div class="dimension">
+                                        <h4>Routine vs. Spontaneous</h4>
+                                        <p>Does your pet thrive on routine or enjoy variety and surprises?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="test-info">
+                                <div class="info-points">
+                                    <div class="info-point">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Takes 5-10 minutes</span>
+                                    </div>
+                                    <div class="info-point">
+                                        <i class="fas fa-question-circle"></i>
+                                        <span>16 behavioral questions</span>
+                                    </div>
+                                    <div class="info-point">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <span>Detailed personality profile</span>
+                                    </div>
+                                    <div class="info-point">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <span>Custom care recommendations</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pet-selection">
+                            <h3>First, tell us about your pet:</h3>
+                            <div class="form-group">
+                                <label for="petName" class="form-label">Pet's Name</label>
+                                <input type="text" id="petName" class="form-input" placeholder="Enter your pet's name">
+                            </div>
+                            <div class="form-group">
+                                <label for="petType" class="form-label">Pet Type</label>
+                                <select id="petType" class="form-select">
+                                    <option value="">Select pet type</option>
+                                    <option value="dog">Dog 🐕</option>
+                                    <option value="cat">Cat 🐱</option>
+                                    <option value="bird">Bird 🐦</option>
+                                    <option value="rabbit">Rabbit 🐰</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button id="startTestBtn" class="btn btn-primary btn-large">
+                            <i class="fas fa-play"></i> Start Personality Test
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Test Questions -->
+                <div id="testQuestions" class="test-questions" style="display: none;">
+                    <div class="question-card">
+                        <div class="question-header">
+                            <div class="question-progress">
+                                <div class="progress-bar">
+                                    <div id="questionProgress" class="progress-fill"></div>
+                                </div>
+                                <span id="questionCounter" class="question-counter">Question 1 of 16</span>
+                            </div>
+                        </div>
+                        
+                        <div class="question-content">
+                            <h2 id="questionText" class="question-text"></h2>
+                            <div class="answer-options">
+                                <button id="optionA" class="answer-option">
+                                    <span class="option-letter">A</span>
+                                    <span id="optionAText" class="option-text"></span>
+                                </button>
+                                <button id="optionB" class="answer-option">
+                                    <span class="option-letter">B</span>
+                                    <span id="optionBText" class="option-text"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test Results -->
+                <div id="testResults" class="test-results" style="display: none;">
+                    <div class="card">
+                        <div class="mbti-result">
+                            <div class="result-header">
+                                <h2>🎉 <span id="resultPetName">Your Pet</span>'s Personality Type</h2>
+                                <div id="personalityType" class="personality-type">ENFP</div>
+                                <h3 id="personalityName" class="personality-name">The Enthusiast</h3>
+                                <p id="personalityDescription" class="personality-description"></p>
+                            </div>
+                        </div>
+                        
+                        <div class="personality-details">
+                            <div class="trait-breakdown">
+                                <h3>Personality Breakdown</h3>
+                                <div class="trait-bars">
+                                    <div class="trait-bar">
+                                        <div class="trait-labels">
+                                            <span>Social</span>
+                                            <span>Independent</span>
+                                        </div>
+                                        <div class="bar-container">
+                                            <div id="socialBar" class="trait-fill"></div>
+                                        </div>
+                                        <span id="socialPercentage" class="trait-percentage">0%</span>
+                                    </div>
+                                    
+                                    <div class="trait-bar">
+                                        <div class="trait-labels">
+                                            <span>Active</span>
+                                            <span>Calm</span>
+                                        </div>
+                                        <div class="bar-container">
+                                            <div id="activeBar" class="trait-fill"></div>
+                                        </div>
+                                        <span id="activePercentage" class="trait-percentage">0%</span>
+                                    </div>
+                                    
+                                    <div class="trait-bar">
+                                        <div class="trait-labels">
+                                            <span>Curious</span>
+                                            <span>Cautious</span>
+                                        </div>
+                                        <div class="bar-container">
+                                            <div id="curiousBar" class="trait-fill"></div>
+                                        </div>
+                                        <span id="curiousPercentage" class="trait-percentage">0%</span>
+                                    </div>
+                                    
+                                    <div class="trait-bar">
+                                        <div class="trait-labels">
+                                            <span>Routine</span>
+                                            <span>Spontaneous</span>
+                                        </div>
+                                        <div class="bar-container">
+                                            <div id="routineBar" class="trait-fill"></div>
+                                        </div>
+                                        <span id="routinePercentage" class="trait-percentage">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="recommendations">
+                                <div class="recommendation-tabs">
+                                    <button class="rec-tab active" data-tab="play">🎾 Play & Activities</button>
+                                    <button class="rec-tab" data-tab="training">🎓 Training Tips</button>
+                                    <button class="rec-tab" data-tab="care">💝 Care & Bonding</button>
+                                    <button class="rec-tab" data-tab="environment">🏠 Environment</button>
+                                </div>
+                                
+                                <div id="playTab" class="recommendation-content">
+                                    <h4>Recommended Activities</h4>
+                                    <div id="playRecommendations" class="recommendation-list"></div>
+                                </div>
+                                
+                                <div id="trainingTab" class="recommendation-content" style="display: none;">
+                                    <h4>Training Approach</h4>
+                                    <div id="trainingRecommendations" class="recommendation-list"></div>
+                                </div>
+                                
+                                <div id="careTab" class="recommendation-content" style="display: none;">
+                                    <h4>Care & Bonding</h4>
+                                    <div id="careRecommendations" class="recommendation-list"></div>
+                                </div>
+                                
+                                <div id="environmentTab" class="recommendation-content" style="display: none;">
+                                    <h4>Ideal Environment</h4>
+                                    <div id="environmentRecommendations" class="recommendation-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="result-actions">
+                            <button id="saveResultBtn" class="btn btn-feature">
+                                <i class="fas fa-save"></i> Save Results
+                            </button>
+                            <button id="shareResultBtn" class="btn btn-secondary">
+                                <i class="fas fa-share"></i> Share Results
+                            </button>
+                            <button id="retakeTestBtn" class="btn btn-primary">
+                                <i class="fas fa-redo"></i> Test Another Pet
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saved Results -->
+                <div id="savedResults" class="saved-results" style="display: none;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">📚 Your Pet Profiles</h3>
+                            <p class="card-subtitle">Previously tested pets and their personality types</p>
+                        </div>
+                        <div id="savedResultsList" class="saved-results-list">
+                            <p class="no-results">No saved results yet. Take the test to create your pet's personality profile!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educational Content -->
+                <div class="educational-section">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">🧠 Understanding Pet Personalities</h3>
+                        </div>
+                        <div class="educational-content">
+                            <div class="edu-item">
+                                <div class="edu-icon">🔬</div>
+                                <div class="edu-text">
+                                    <h4>Scientific Basis</h4>
+                                    <p>Pet personality assessment is based on established animal behavior research and psychological principles adapted for companion animals.</p>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <div class="edu-icon">📊</div>
+                                <div class="edu-text">
+                                    <h4>Individual Differences</h4>
+                                    <p>Just like humans, each pet has unique traits that influence their behavior, preferences, and how they interact with their environment.</p>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <div class="edu-icon">🎯</div>
+                                <div class="edu-text">
+                                    <h4>Better Care</h4>
+                                    <p>Understanding your pet's personality helps you provide more targeted care, training, and activities that match their natural inclinations.</p>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <div class="edu-icon">💝</div>
+                                <div class="edu-text">
+                                    <h4>Stronger Bond</h4>
+                                    <p>When you understand your pet's personality, you can build a deeper, more meaningful relationship based on their individual needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-icon">🐾</span>
+                        <span class="brand-text">Petopia</span>
+                    </div>
+                    <p>Your ultimate pet companion website for naming, caring, and understanding your beloved pets.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="name-generator.html">Name Generator</a></li>
+                        <li><a href="quiz.html">Pet Quiz</a></li>
+                        <li><a href="virtual-pet.html">Virtual Pet</a></li>
+                        <li><a href="mbti.html">Pet MBTI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Petopia. All rights reserved. Made with ❤️ for pet lovers everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/mbti.js"></script>
+</body>
+</html>
