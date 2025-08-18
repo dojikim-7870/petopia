@@ -6,18 +6,14 @@
     <meta name="description" content="Have questions about Petopia? Contact us through our contact form or reach out via email. We'd love to hear from you and help with your pet-related needs!">
     <meta name="keywords" content="contact Petopia, customer support, pet questions, feedback, help">
     
-    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
     
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
@@ -40,7 +36,6 @@
         </nav>
     </header>
 
-    <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
             <h1>💌 Contact Us</h1>
@@ -48,98 +43,16 @@
         </div>
     </section>
 
-    <!-- Main Content -->
     <section class="main-content">
         <div class="container">
             <div class="contact-content">
-                <!-- Contact Form -->
-                <div class="contact-form-section">
+                <div class="contact-info-section full-width">
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="card-title">📝 Send Us a Message</h2>
-                            <p class="card-subtitle">Fill out the form below and we'll get back to you as soon as possible!</p>
+                            <h2 class="card-title">💌 Get In Touch</h2>
+                            <p class="card-subtitle">Feel free to reach out to us through the methods below.</p>
                         </div>
-                        
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName" class="form-label">First Name *</label>
-                                    <input type="text" id="firstName" name="firstName" class="form-input" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName" class="form-label">Last Name</label>
-                                    <input type="text" id="lastName" name="lastName" class="form-input">
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email Address *</label>
-                                <input type="email" id="email" name="email" class="form-input" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject" class="form-label">Subject *</label>
-                                <select id="subject" name="subject" class="form-select" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="general">General Question</option>
-                                    <option value="technical">Technical Issue</option>
-                                    <option value="feature">Feature Request</option>
-                                    <option value="feedback">Feedback & Suggestions</option>
-                                    <option value="business">Business Inquiry</option>
-                                    <option value="privacy">Privacy Concern</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="petType" class="form-label">Your Pet Type (Optional)</label>
-                                <select id="petType" name="petType" class="form-select">
-                                    <option value="">Select your pet type</option>
-                                    <option value="dog">Dog 🐕</option>
-                                    <option value="cat">Cat 🐱</option>
-                                    <option value="bird">Bird 🐦</option>
-                                    <option value="rabbit">Rabbit 🐰</option>
-                                    <option value="fish">Fish 🐠</option>
-                                    <option value="reptile">Reptile 🦎</option>
-                                    <option value="multiple">Multiple Pets</option>
-                                    <option value="none">No Pet Yet</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message" class="form-label">Message *</label>
-                                <textarea id="message" name="message" class="form-textarea" placeholder="Tell us how we can help you..." required></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
-                                    <span class="checkbox-text">I'd like to receive updates about new features and pet care tips</span>
-                                </label>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="privacy" name="privacy" class="form-checkbox" required>
-                                    <span class="checkbox-text">I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms of Use</a> *</span>
-                                </label>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-submit">
-                                <i class="fas fa-paper-plane"></i> Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
 
-                <!-- Contact Information -->
-                <div class="contact-info-section">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">🌟 Other Ways to Reach Us</h2>
-                        </div>
-                        
                         <div class="contact-methods">
                             <div class="contact-method">
                                 <div class="method-icon">
@@ -147,36 +60,37 @@
                                 </div>
                                 <div class="method-details">
                                     <h3>Email Us</h3>
-                                    <p>For general inquiries and support</p>
-                                    <a href="mailto:support@petopia.icu" class="contact-link">support@petopia.icu</a>
+                                    <p>For all inquiries, feedback, and support.</p>
+                                    <button id="emailBtn" class="contact-button">Send Email</button>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-method">
                                 <div class="method-icon">
                                     <i class="fas fa-shield-alt"></i>
                                 </div>
-                                <div class="method-details">
-                                    <h3>Privacy & Legal</h3>
-                                    <p>For privacy and legal matters</p>
-                                    <a href="mailto:support@petopia.icu" class="contact-link">support@petopia.icu</a>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-method">
-                                <div class="method-icon">
-                                    <i class="fas fa-handshake"></i>
-                                </div>
-                                <div class="method-details">
-                                    <h3>Business Partnerships</h3>
-                                    <p>For collaboration and partnerships</p>
-                                    <a href="mailto:support@petopia.icu" class="contact-link">support@petopia.icu</a>
-                                </div>
+    <div class="method-details">
+        <h3>Privacy & Legal</h3>
+        <p>For privacy and legal matters</p>
+        <button id="legalBtn" class="contact-button">Send Email</button>
+    </div>
+</div>
+
+<div class="contact-method">
+    <div class="method-icon">
+        <i class="fas fa-handshake"></i>
+    </div>
+    <div class="method-details">
+        <h3>Business Partnerships</h3>
+        <p>For collaboration and partnerships</p>
+        <button id="businessBtn" class="contact-button">Send Email</button>
+    </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- FAQ Section -->
+                </div>
+            
+                <div class="faq-section">
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">❓ Frequently Asked Questions</h3>
@@ -214,7 +128,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -261,302 +174,217 @@
             </div>
         </div>
     </footer>
+    
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Contact Email</h3>
+            <p>If you have any inquiries, please send them to the email below:</p>
+            <p><a href="mailto:support@petopia.icu">support@petopia.icu</a></p>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
     <script>
-        // Contact form handling
         document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contactForm');
-            
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const submitButton = contactForm.querySelector('.btn-submit');
-                const originalContent = submitButton.innerHTML;
-                
-                // Show loading state
-                submitButton.innerHTML = '<span class="loading"></span> Sending...';
-                submitButton.disabled = true;
-                
-                // Get form data
-                const formData = new FormData(contactForm);
-                const formObject = Object.fromEntries(formData);
-                
-                // Simulate form submission (in a real application, this would send to a server)
-                setTimeout(() => {
-                    // Reset form
-                    contactForm.reset();
-                    
-                    // Reset button
-                    submitButton.innerHTML = originalContent;
-                    submitButton.disabled = false;
-                    
-                    // Show success message
-                    PetopiaUtils.showAlert('Thank you for your message! We\'ll get back to you soon. 🐾', 'success');
-                    
-                    // In a real application, you would send the form data to your server here
-                    console.log('Contact form submission:', formObject);
-                    
-                }, 2000);
-            });
+            const emailBtn = document.getElementById('emailBtn');
+            const modal = document.getElementById('emailModal');
+            const closeModalBtn = document.querySelector('.close-modal');
+
+            if (emailBtn && modal && closeModalBtn) {
+                // 버튼 클릭 시 모달 열기
+                emailBtn.onclick = function() {
+                    modal.style.display = 'block';
+                }
+
+                // 닫기 버튼 클릭 시 모달 닫기
+                closeModalBtn.onclick = function() {
+                    modal.style.display = 'none';
+                }
+
+                // 모달 외부 클릭 시 모달 닫기
+                window.onclick = function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                }
+            }
         });
     </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 모든 버튼과 모달 요소를 가져옵니다.
+        const emailBtn = document.getElementById('emailBtn');
+        const legalBtn = document.getElementById('legalBtn');
+        const businessBtn = document.getElementById('businessBtn');
+        
+        const modal = document.getElementById('emailModal');
+        const closeModalBtn = document.querySelector('.close-modal');
+        const modalEmailLink = modal.querySelector('a');
+        
+        // 각 버튼에 클릭 이벤트를 추가합니다.
+        function setupButton(button, email) {
+            if (button) {
+                button.onclick = function() {
+                    modalEmailLink.href = 'mailto:' + email;
+                    modalEmailLink.textContent = email;
+                    modal.style.display = 'block';
+                }
+            }
+        }
+
+        setupButton(emailBtn, 'support@petopia.icu');
+        setupButton(legalBtn, 'support@petopia.icu'); // 
+        setupButton(businessBtn, 'support@petopia.icu'); //
+        // 모달 닫기 기능은 기존과 동일합니다.
+        if (modal && closeModalBtn) {
+            closeModalBtn.onclick = function() {
+                modal.style.display = 'none';
+            }
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            }
+        }
+    });
+</script>
     
     <style>
         /* Contact page specific styles */
         .contact-content {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1fr; /* 폼을 삭제하고 1열로 변경 */
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
         
-        .contact-form-section,
         .contact-info-section {
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
         
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-        
-        .checkbox-label {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
+        /* 새로운 버튼 스타일 */
+        .contact-button {
+            background-color: #6c5ce7;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            line-height: 1.5;
+            font-size: 1rem;
+            margin-top: 10px;
+            transition: background-color 0.3s;
         }
-        
-        .form-checkbox {
-            margin-top: 0.25rem;
+
+        .contact-button:hover {
+            background-color: #5b4cdb;
         }
-        
-        .checkbox-text {
-            color: var(--gray-dark);
-            font-size: 0.9rem;
-        }
-        
-        .checkbox-text a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        
-        .checkbox-text a:hover {
-            text-decoration: underline;
-        }
-        
-        .btn-submit {
-            width: 100%;
-            margin-top: 1rem;
-            padding: 1rem 2rem;
-        }
-        
+
         .contact-methods {
-            display: flex;
-            flex-direction: column;
+            display: grid; /* flex에서 grid로 변경하여 여러 줄로 배치 */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
         
         .contact-method {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 1rem;
-            background: var(--gray-light);
-            border-radius: var(--border-radius);
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
         }
         
         .method-icon {
-            background: var(--primary-color);
-            color: var(--white);
-            width: 50px;
-            height: 50px;
+            background: #f1f2f6;
+            color: #6c5ce7;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             flex-shrink: 0;
+            margin: 0 auto 1rem;
         }
         
         .method-details h3 {
-            color: var(--gray-dark);
+            color: #333;
             margin-bottom: 0.25rem;
             font-weight: 600;
         }
         
         .method-details p {
-            color: var(--gray-medium);
+            color: #666;
             margin-bottom: 0.5rem;
             font-size: 0.9rem;
         }
         
         .contact-link {
-            color: var(--primary-color);
+            color: #6c5ce7;
             font-weight: 600;
             text-decoration: none;
-            transition: var(--transition);
+            transition: color 0.3s;
         }
         
         .contact-link:hover {
             text-decoration: underline;
-            color: var(--secondary-color);
+            color: #5b4cdb;
         }
         
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            padding-top: 60px;
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 2rem;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+            position: relative;
+            text-align: center;
+        }
+        
+        .close-modal {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-modal:hover,
+        .close-modal:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        /* FAQ 섹션은 그대로 둡니다. */
         .faq-section {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
-        
-        .faq-item {
-            background: var(--gray-light);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            border-left: 4px solid var(--primary-color);
-        }
-        
-        .faq-item h4 {
-            color: var(--gray-dark);
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-        
-        .faq-item p {
-            color: var(--gray-medium);
-            line-height: 1.6;
-            margin: 0;
-        }
-        
-        .faq-item a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        
-        .faq-item a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Legal content styles for privacy and terms pages */
-        .legal-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .last-updated {
-            background: var(--gray-light);
-            padding: 0.75rem 1rem;
-            border-radius: var(--border-radius);
-            color: var(--gray-medium);
-            font-weight: 600;
-            margin: 0;
-            text-align: center;
-        }
-        
-        .legal-text {
-            padding: 2rem;
-            line-height: 1.7;
-        }
-        
-        .legal-text h2 {
-            color: var(--gray-dark);
-            font-weight: 700;
-            margin: 2rem 0 1rem 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary-color);
-        }
-        
-        .legal-text h2:first-child {
-            margin-top: 0;
-        }
-        
-        .legal-text h3 {
-            color: var(--gray-dark);
-            font-weight: 600;
-            margin: 1.5rem 0 0.75rem 0;
-        }
-        
-        .legal-text p {
-            color: var(--gray-dark);
-            margin-bottom: 1rem;
-        }
-        
-        .legal-text ul {
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-        
-        .legal-text li {
-            color: var(--gray-dark);
-            margin-bottom: 0.5rem;
-        }
-        
-        .legal-text strong {
-            color: var(--gray-dark);
-            font-weight: 600;
-        }
-        
-        .legal-text a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .legal-text a:hover {
-            text-decoration: underline;
-        }
-        
-        .privacy-summary,
-        .terms-summary {
-            background: var(--gray-light);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            margin-top: 2rem;
-        }
-        
-        .privacy-summary h3,
-        .terms-summary h3 {
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-        
-        .summary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .summary-item {
-            text-align: center;
-            padding: 1rem;
-        }
-        
-        .summary-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .summary-item h4 {
-            color: var(--gray-dark);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        
-        .summary-item p {
-            color: var(--gray-medium);
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin: 0;
-        }
-        
+
         @media (max-width: 768px) {
             .contact-content {
                 grid-template-columns: 1fr;
