@@ -774,3 +774,7 @@ body {
     color: var(--gray-medium);
     font-size: 0.9rem;
 }
+.utilcentral-card {
+    max-width: 900px;  /* 원하는 카드 최대 너비 */
+    margin: 20px auto; /* 위아래 간격 + 가운데 정렬 */
+}
